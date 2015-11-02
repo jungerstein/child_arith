@@ -3,7 +3,7 @@
 
 #include "integer.h"
 
-/* Count how many digits are in an int to print. */
+// Count how many digits are in an int to print.
 static int count_int_digit(int a)
 {
   int n_digit = 0;
@@ -28,5 +28,15 @@ int_for_child int_add(int a, int b)
 
   result->val = a->val + b->val;
   normalize_int(result);
-  return result; 
+  return result;
+}
+
+// Subtract b from a.
+int_for_child int_sub(int a, int b)
+{
+  int_for_child result;
+
+  result->val = a->val - b->val;
+  normalize_int(result);
+  return result;
 }
