@@ -8,7 +8,7 @@
 
 typedef struct
 {
-  int val; // It is not too bad to let our children learn negative numbers.
+  long long val; // It is not bad to let our children learn negative numbers.
   size_t len;
 }
 int_for_child;
