@@ -16,15 +16,15 @@ static int count_int_digit(int a)
   return n_digit;
 }
 
-static void normalize_int(int_for_child *a)
+static void normalize_int(IntForChild *a)
 {
   a->len = count_int_digit(a->val);
 }
 
 // Add a and b.
-int_for_child int_add(int a, int b)
+IntForChild int_add(int a, int b)
 {
-  int_for_child result;
+  IntForChild result;
 
   result->val = a->val + b->val;
   normalize_int(result);
@@ -32,9 +32,9 @@ int_for_child int_add(int a, int b)
 }
 
 // Subtract b from a.
-int_for_child int_sub(int a, int b)
+IntForChild int_sub(int a, int b)
 {
-  int_for_child result;
+  IntForChild result;
 
   result->val = a->val - b->val;
   normalize_int(result);

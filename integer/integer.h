@@ -6,11 +6,12 @@
 
 #include <stdlib.h>
 
-typedef struct
+class IntForChild
 {
+  public: 
   long long val; // It is not bad to let our children learn negative numbers.
   size_t len;
 }
-int_for_child;
+;
 
 #endif // JSTEIN_CHILD_ARITH_INTEGER_H__
