@@ -22,21 +22,31 @@ static void normalize_int(IntForChild *a)
 }
 
 // Add a and b.
-IntForChild int_add(int a, int b)
+IntForChild int_add(IntForChild a, IntForChild b)
 {
   IntForChild result;
 
-  result->val = a->val + b->val;
-  normalize_int(result);
+  result.val = a.val + b.val;
+  normalize_int(&result);
   return result;
 }
 
 // Subtract b from a.
-IntForChild int_sub(int a, int b)
+IntForChild int_sub(IntForChild a, IntForChild b)
 {
   IntForChild result;
 
-  result->val = a->val - b->val;
-  normalize_int(result);
+  result.val = a.val - b.val;
+  normalize_int(&result);
+  return result;
+}
+
+// Multiply a by b. 
+IntForChild int_mul(IntForChild a, IntForChild b)
+{
+  IntForChild result;
+
+  result.val = a.val * b.val;
+  normalize_int(&result);
   return result;
 }
