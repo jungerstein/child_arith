@@ -13,7 +13,7 @@ def print_formula_general(func, name, integer_aleph, integer_bet):
     string_bet   = integer_bet.str_formula()
     string_ans   = func(integer_aleph, integer_bet).str_formula()
     tap_aleph, tap_bet, tap_ans = tap_strings([string_aleph, string_bet, string_ans])
-    tap_bet = name + ' ' + tap_bet
+    tap_bet = ' ' + name + ' ' + tap_bet
     tap_aleph, tap_bet, tap_ans = tap_strings([tap_aleph, tap_bet, tap_ans])
     separator = '-'*len(tap_ans)
     printout = '\n'.join([tap_aleph, tap_bet, separator, tap_ans])
@@ -32,7 +32,7 @@ def print_formula_times(integer_aleph, integer_bet):
     string_bet   = integer_bet.str_formula()
     string_ans   = (integer_aleph * integer_bet).str_formula()
     tap_aleph, tap_bet, tap_ans = tap_strings([string_aleph, string_bet, string_ans])
-    tap_bet = '* ' + tap_bet
+    tap_bet = ' * ' + tap_bet
     tap_aleph, tap_bet, tap_ans = tap_strings([tap_aleph, tap_bet, tap_ans])
     separator = '-'*len(tap_ans)
 
