@@ -18,6 +18,7 @@ def print_formula_general(func, name, integer_aleph, integer_bet):
     separator = '-'*len(tap_ans)
     printout = '\n'.join([tap_aleph, tap_bet, separator, tap_ans])
     print(printout)
+    return printout
 
 
 print_formula_add = lambda x, y: print_formula_general(lambda a, b: a+b, '+', x, y)
@@ -53,6 +54,7 @@ def print_formula_times(integer_aleph, integer_bet):
           tap_ans
         ])
     print(printout)
+    return printout
 
 
 if __name__ == '__main__': 
