@@ -32,6 +32,11 @@ class IntegerForChild:
     def str_formula(self, n_empty_digit=0):
         return ' '.join(str(self) + ' ' * n_empty_digit)
 
+    def digits(self): 
+        if self.val < 0: 
+            raise NotImplementedError('Just wait for negative numbers being supported. ')
+        return [int(x) for x in str(self)]
+
     # TODO Add methods ==, >, <, etc. 
 
 
